@@ -1,0 +1,81 @@
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@200;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans Arabic', sans-serif;
+}
+
+body{
+    height: 100vh;
+    background: rgba(137, 43, 226, .687);
+    display: grid;
+    place-items: center;
+    direction: rtl;
+}
+
+#openModal{
+    border: 0;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 7px;
+    background: #fefefe;
+    color: #000;
+    cursor: pointer;
+}
+
+.modal-container{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .4);
+    overflow: auto;
+}
+
+.modal-content{
+    width: 400px;
+    background: #fefefe;
+    margin: auto;
+    margin-top: 100px;
+    animation: animateTop .5s;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .3);
+}
+
+.modal-header{
+    background: blueviolet;
+    padding: 2px 16px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header  .closeBtn{
+    font-size: 35px;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.modal-header > .closeBtn:hover{
+    color: rgb(39, 39, 39);
+}
+
+.modal-body{
+    padding: 15px 20px;
+    text-align: justify;
+    line-height: 37px;
+}
+
+@keyframes animateTop {
+    0%{
+        margin-top: -450px;
+        opacity: 0;
+    }
+    100%{
+        margin-top: 100px;
+        opacity: 1;
+    }
+}
